@@ -4,7 +4,7 @@
   "description": "Backend with express and mongo",
   "main": "index.js",
   "scripts": {
-   "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js"
   },
   "author": "Alexander Kramer <kramer.axs1@gmail.com>",
   "license": "MIT",
@@ -12,6 +12,7 @@
     "nodemon": "2.0.6"
   },
   "dependencies": {
+    "cors": "2.8.5",
     "express": "4.17.1",
     "mongoose": "5.10.14"
   }

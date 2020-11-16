@@ -10,6 +10,6 @@ router.get('/patients/:id', getClientById);
 
 router.put('/patients/:id', updateClient);
 
-router.delete('patients/:id', deleteClient);
+router.delete('/patients/:id', deleteClient);
 
 module.exports = router;

@@ -10,6 +10,10 @@ const patientSchema = new Schema({
     type: String,
     trim: true,
   },
+  phone: {
+    type: String,
+    trim: true,
+  },
   date: {
     type: String,
     trim: true,
@@ -18,7 +22,7 @@ const patientSchema = new Schema({
     type: String,
     trim: true,
   },
-  symtomps: {
+  symptoms: {
     type: String,
     trim: true,
   }

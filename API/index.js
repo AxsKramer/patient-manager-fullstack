@@ -1,8 +1,24 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = require('./routes/index');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 4000;
+
+
+const whitelist = ['http://localhost:3000'];
+const corsOptions = {
+  origin: (origin, callback) => {
+    const exist = whitelist.some(domain => domain === origin);
+    exist ? callback(null, true) : callback(new Error('Not Allowed By CORS'))
+  }
+}
+
+//Enable Cors with configurations
+// app.use(cors(corsOptions));
+
+//Enable Cors
+app.use(cors());
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/patients', {
